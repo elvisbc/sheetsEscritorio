@@ -18,8 +18,9 @@ public class Busqueda extends javax.swing.JFrame {
     
     private static Sheets sheetServicio;
     private static String Nombre_Aplicacion="Ejemplo google sheets";
-    private static String Google_Sheet_Id="125WxoxoodpoW4W06gagqt_X1iy_q4_Ey0MU7-nuaJy4";//1pOxvp2Gf8-JP4QulwtZpMo8uuT7XJdzyG7bUqNeiqUA
-    private static String Rango="!A2:CO";//base final!A2:CO
+    private static String Google_Sheet_Id="1pOxvp2Gf8-JP4QulwtZpMo8uuT7XJdzyG7bUqNeiqUA";//1pOxvp2Gf8-JP4QulwtZpMo8uuT7XJdzyG7bUqNeiqUA
+    private static String hojaID="base final";
+    private static String Rango=hojaID+"!A2:CO";//base final!A2:CO
 
     /**
      * Creates new form Busqueda
@@ -84,6 +85,15 @@ public class Busqueda extends javax.swing.JFrame {
         txtTipoSolucion = new javax.swing.JTextField();
         txtRegistroLLegada = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
+        btnTrabajo = new javax.swing.JButton();
+        btnPartener = new javax.swing.JButton();
+        btnEstado = new javax.swing.JButton();
+        btnTicket = new javax.swing.JButton();
+        btnLlegada = new javax.swing.JButton();
+        btnRegistrollegada = new javax.swing.JButton();
+        btnSolucion = new javax.swing.JButton();
+        btnMotivoCreacion = new javax.swing.JButton();
+        btnFinalizada = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 0, 51));
@@ -99,31 +109,59 @@ public class Busqueda extends javax.swing.JFrame {
 
         jLabel2.setText("Nombre");
 
+        txtNombre.setEditable(false);
+
         jLabel3.setText("Provincia");
+
+        txtProvincia.setEditable(false);
 
         jLabel4.setText("Direccion");
 
+        txtDireccion.setEditable(false);
+
         jLabel5.setText("Distrito");
+
+        txtDistrito.setEditable(false);
 
         jLabel6.setText("MAC");
 
+        txtMac.setEditable(false);
+
         jLabel7.setText("CP");
+
+        txtCp.setEditable(false);
 
         jLabel8.setText("OT");
 
+        txtOt.setEditable(false);
+
         jLabel9.setText("Telefono");
+
+        txtTelefono.setEditable(false);
+
+        txtPuerto.setEditable(false);
 
         jLabel10.setText("CTO/NAP");
 
+        txtCtoNap.setEditable(false);
+
         jLabel11.setText("Piso");
+
+        txtPiso.setEditable(false);
 
         jLabel12.setText("Puerto");
 
         jLabel15.setText("Partener");
 
+        txtPartener.setEditable(false);
+
         jLabel16.setText("Tipo trabajo");
 
+        txtTipo.setEditable(false);
+
         jLabel17.setText("Ticket");
+
+        txtTicket.setEditable(false);
 
         jLabel19.setText("Hora de llegada");
 
@@ -135,6 +173,8 @@ public class Busqueda extends javax.swing.JFrame {
         txtLogObservacion.setRows(5);
         jScrollPane1.setViewportView(txtLogObservacion);
 
+        txtMotivoCreacion.setEditable(false);
+
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +184,74 @@ public class Busqueda extends javax.swing.JFrame {
 
         jLabel20.setText("Estado");
 
+        txtEstado.setEditable(false);
+
+        txtTipoSolucion.setEditable(false);
+
         jLabel21.setText("Registro llegada");
+
+        btnTrabajo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnTrabajo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTrabajoActionPerformed(evt);
+            }
+        });
+
+        btnPartener.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnPartener.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPartenerActionPerformed(evt);
+            }
+        });
+
+        btnEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnEstado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstadoActionPerformed(evt);
+            }
+        });
+
+        btnTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnTicket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTicketActionPerformed(evt);
+            }
+        });
+
+        btnLlegada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnLlegada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLlegadaActionPerformed(evt);
+            }
+        });
+
+        btnRegistrollegada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnRegistrollegada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrollegadaActionPerformed(evt);
+            }
+        });
+
+        btnSolucion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnSolucion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSolucionActionPerformed(evt);
+            }
+        });
+
+        btnMotivoCreacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnMotivoCreacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMotivoCreacionActionPerformed(evt);
+            }
+        });
+
+        btnFinalizada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono_guardar.png"))); // NOI18N
+        btnFinalizada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinalizadaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -240,33 +347,50 @@ public class Busqueda extends javax.swing.JFrame {
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                     .addComponent(txtHorallegada, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
                                                     .addComponent(txtRegistroLLegada))))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtTipoSolucion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(txtMotivoCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtHorafinalizada, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(btnTicket, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(btnLlegada, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(txtMotivoCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(txtHorafinalizada, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(btnFinalizada, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(btnMotivoCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(btnTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnPartener, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnRegistrollegada, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(txtTipoSolucion, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnSolucion, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(99, 99, 99)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtMac, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnBuscar)
-                    .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnActualizar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(btnBuscar)
+                            .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnActualizar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pbBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -287,28 +411,50 @@ public class Busqueda extends javax.swing.JFrame {
                             .addComponent(jLabel9)
                             .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel16)
+                                        .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel15)
+                                        .addComponent(txtPartener, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnPartener, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtTipoSolucion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel20)
+                                        .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSolucion, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(txtPartener, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtTipoSolucion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel17)
-                            .addComponent(txtTicket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMotivoCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel19)
-                            .addComponent(txtHorallegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtHorafinalizada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel17)
+                                        .addComponent(txtTicket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnTicket, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnLlegada, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel19)
+                                        .addComponent(txtHorallegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtMotivoCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnMotivoCreacion, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtHorafinalizada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnFinalizada, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -321,14 +467,14 @@ public class Busqueda extends javax.swing.JFrame {
                             .addComponent(txtOt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtRegistroLLegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnRegistrollegada, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtRegistroLLegada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel21)))))
                 .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
@@ -345,7 +491,7 @@ public class Busqueda extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11)
                             .addComponent(txtPiso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -371,20 +517,154 @@ public class Busqueda extends javax.swing.JFrame {
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
         // TODO add your handling code here:
-       pbBusqueda.setVisible(true);
-            if (txtBusqueda.getText().isEmpty()) {
-                pbBusqueda.setVisible(false);
-                txtLogObservacion.setText("Ingrese un DNI");
-                
-            }else{
-                
-                HiloActualizarDatos hiloActualizarDatos=new HiloActualizarDatos();
-                Thread hilo=new Thread(hiloActualizarDatos);
-                hilo.start();
-            }
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+
+            HiloActualizarDatos hiloActualizarDatos=new HiloActualizarDatos();
+            Thread hilo=new Thread(hiloActualizarDatos);
+            hilo.start();
+        }
         
         
     }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void btnMotivoCreacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMotivoCreacionActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("AH", txtMotivoCreacion.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+        
+    }//GEN-LAST:event_btnMotivoCreacionActionPerformed
+
+    private void btnFinalizadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizadaActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("BY", txtHorafinalizada.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+        
+    }//GEN-LAST:event_btnFinalizadaActionPerformed
+
+    private void btnLlegadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLlegadaActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("BX", txtHorallegada.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+        
+        
+    }//GEN-LAST:event_btnLlegadaActionPerformed
+
+    private void btnRegistrollegadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrollegadaActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("BZ", txtRegistroLLegada.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+        
+    }//GEN-LAST:event_btnRegistrollegadaActionPerformed
+
+    private void btnTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTicketActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("C", txtTicket.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+        
+    }//GEN-LAST:event_btnTicketActionPerformed
+
+    private void btnSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSolucionActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("BT", txtTipoSolucion.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+        
+    }//GEN-LAST:event_btnSolucionActionPerformed
+
+    private void btnEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadoActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("BQ", txtEstado.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+        
+    }//GEN-LAST:event_btnEstadoActionPerformed
+
+    private void btnPartenerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartenerActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("BP", txtPartener.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+    }//GEN-LAST:event_btnPartenerActionPerformed
+
+    private void btnTrabajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrabajoActionPerformed
+        // TODO add your handling code here:
+        pbBusqueda.setVisible(true);
+        if (txtBusqueda.getText().isEmpty()) {
+            pbBusqueda.setVisible(false);
+            txtLogObservacion.setText("Ingrese un DNI");
+
+        }else{
+            HiloActualizarDatosPorCelda hiliActualizarDatosPorCelda=new HiloActualizarDatosPorCelda("BQ", txtTipo.getText());
+            Thread hilo=new Thread(hiliActualizarDatosPorCelda);
+            hilo.start();
+        }
+    }//GEN-LAST:event_btnTrabajoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -515,20 +795,68 @@ public class Busqueda extends javax.swing.JFrame {
                     index++;
                     if(fila.get(5).toString().equals(txtBusqueda.getText())){
                        valorEncotrado=true;
-                        //values.set(6,txtNombre.getText());
-                        //fila.set(67,txtPartener.getText());
-                        //fila.set(2,txtTicket.getText());
-                        //fila.set(1,txtTipo.getText());
-                        //fila.set(33,txtMotivoCreacion.getText());
-                        //fila.set(75,txtHorallegada.getText());
-                        //fila.set(76,txtHorafinalizada.getText());
-                        //fila.set(77,txtRegistroLLegada.getText());
-                        //fila.set(70,txtEstado.getText());
-                        //fila.set(71,txtTipoSolucion.getText());
-                     
+                      
                         actualizarCelda("BX"+index, txtHorallegada.getText());
                         actualizarCelda("BY"+index, txtHorafinalizada.getText());
                         actualizarCelda("BZ"+index, txtRegistroLLegada.getText()); 
+                    }
+                    pbBusqueda.setVisible(false);
+                    txtLogObservacion.setText("Registro Actualizado");
+                    
+                   
+                }
+                if(!valorEncotrado){
+                    pbBusqueda.setVisible(false);
+                    txtLogObservacion.setText("El DNI no existe, no se pudo actualizar");
+                }
+           
+               
+          
+            }
+        } catch (Exception e) {
+            pbBusqueda.setVisible(false);
+            e.printStackTrace();
+            txtLogObservacion.setText(""+e);
+           }   
+        }
+        
+    }
+    public class HiloActualizarDatosPorCelda implements Runnable{
+        private String celda;
+        private String valor;
+        public HiloActualizarDatosPorCelda(String celda,String valor){
+            this.celda=celda;
+            this.valor=valor;
+            
+        }
+
+        @Override
+        public void run() {
+             try {
+            Sheetsc sheetsc=new Sheetsc(Nombre_Aplicacion);
+            System.out.println(""+Google_Sheet_Id);
+            sheetServicio=sheetsc.obtenerServicioSheets();
+        
+        
+            ValueRange response=sheetServicio.spreadsheets().values()
+                    .get(Google_Sheet_Id, Rango)
+                    .execute();
+                 System.out.println(""+Rango);
+            List<List<Object>> values=response.getValues();
+
+            if (values==null|| values.isEmpty()) {
+                pbBusqueda.setVisible(false);
+                System.out.println("No hay datos");
+            }else{
+                int index=1;
+                Boolean valorEncotrado=false;
+                for(List fila:values){
+                    index++;
+                    if(fila.get(5).toString().equals(txtBusqueda.getText())){
+                       valorEncotrado=true;
+                        actualizarCelda(""+celda+index, valor);
+                        //actualizarCelda("BY"+index, txtHorafinalizada.getText());
+                        //actualizarCelda("BZ"+index, txtRegistroLLegada.getText()); 
                     }
                     pbBusqueda.setVisible(false);
                     txtLogObservacion.setText("Registro Actualizado");
@@ -559,12 +887,13 @@ public class Busqueda extends javax.swing.JFrame {
             newValues.add(row);
 
             ValueRange body = new ValueRange().setValues(newValues);
-
+             System.out.println(""+celda);
             sheetServicio.spreadsheets().values()
-                    .update(Google_Sheet_Id,celda, body)
+                    .update(Google_Sheet_Id,hojaID+"!"+celda, body)
                     .setValueInputOption("USER_ENTERED")
                     .execute();
          }catch(Exception e){
+            System.out.println(""+e);
              e.printStackTrace();
          }
         
@@ -577,6 +906,15 @@ public class Busqueda extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnEstado;
+    private javax.swing.JButton btnFinalizada;
+    private javax.swing.JButton btnLlegada;
+    private javax.swing.JButton btnMotivoCreacion;
+    private javax.swing.JButton btnPartener;
+    private javax.swing.JButton btnRegistrollegada;
+    private javax.swing.JButton btnSolucion;
+    private javax.swing.JButton btnTicket;
+    private javax.swing.JButton btnTrabajo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
