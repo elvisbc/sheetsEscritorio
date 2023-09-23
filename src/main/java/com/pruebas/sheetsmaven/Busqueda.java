@@ -18,8 +18,8 @@ public class Busqueda extends javax.swing.JFrame {
     
     private static Sheets sheetServicio;
     private static String Nombre_Aplicacion="Ejemplo google sheets";
-    private static String Google_Sheet_Id="1pOxvp2Gf8-JP4QulwtZpMo8uuT7XJdzyG7bUqNeiqUA";//1pOxvp2Gf8-JP4QulwtZpMo8uuT7XJdzyG7bUqNeiqUA
-    private static String hojaID="base final";
+    private static String Google_Sheet_Id="125WxoxoodpoW4W06gagqt_X1iy_q4_Ey0MU7-nuaJy4";//1pOxvp2Gf8-JP4QulwtZpMo8uuT7XJdzyG7bUqNeiqUA
+    private static String hojaID="hoja 3";
     private static String Rango=hojaID+"!A2:CO";//base final!A2:CO
 
     /**
